@@ -22,6 +22,7 @@ def analyzer(Systolic_BP, Diastolic_BP, Heart_Rate, Heart_O2_Level, Body_temp):
             Hypertension = True
         else:
             Hypertension = False
+        break
     except ValueError:
         print("Alert! No valid input of blood pressure!")
         
@@ -43,5 +44,6 @@ def analyzer(Systolic_BP, Diastolic_BP, Heart_Rate, Heart_O2_Level, Body_temp):
             Oxygen_Supply = True
         else:
             Oxygen_Supply = False
+        break
     except ValueError:
         print("Alert! No valid input of Heart Rate and Body Temperature")

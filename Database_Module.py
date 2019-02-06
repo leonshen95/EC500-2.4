@@ -20,9 +20,9 @@ data format of infoDB:
 
 class DataBaseModule:
     
-    def __init__(self,infoDB,authDB):
+    def __init__(self):
         self.infoDB = infoDB
-        self.authDB = authDB
+        self.authDB = authenDB
         self.auth = False
     
 

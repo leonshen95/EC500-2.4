@@ -5,6 +5,29 @@
 <img align = center src = "https://github.com/leonshen95/EC500/blob/master/EC500%20diagram%201.jpg?raw=true">
  
 ## Database Module(Yuxuan Su & Zifan Wang)
+before using the Database Module, you should construct the database object first:  
+```
+db_module = DataBaseModule()
+# must authen the db_module before using it
+db_module.authen(userid, password)
+
+# to insert patient's data into database module
+# here's the example format of patient's data:
+data = {
+            'time': '2019-02-06 17:11',
+            'gender': 'male',
+            'heartrate': 100,
+            'blood_pressure': 125,
+            'blood_oxygen': 0.7
+        }
+db_module.insert(userid, data)
+
+# to search patient's data from database module
+data = db_module.search(userid)
+
+# to delete patirent's data
+db_module.delete(userid)
+```
 ### Rough code for authentation
 ```
 class authentation:

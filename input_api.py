@@ -24,12 +24,9 @@ class intput
 
     def return_request(wire):
         alert = 1
-        user_db = 2
-        data_db = 3
+        data_db = 2
         if (wire == alert):
-            return alert_data
-        if (wire == user_db):
-            return user_info
+            return user_data
         if (wire == data_db):
             return user_data & user_info
 

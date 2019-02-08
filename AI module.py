@@ -37,9 +37,9 @@ class AI_module(object):
         oxygen=np.array(Blood_oxygen)
         pressure = np.array(Blood_pressure)
         Pulse = np.array(Pulses)
-        pressure_predict_result = np.means(pressure)
-        oxygen_predict_result=np.means(oxygen)
-        Pulse_predict_result = np.means(Pulse)
+        pressure_predict_result = np.mean(pressure)
+        oxygen_predict_result=np.mean(oxygen)
+        Pulse_predict_result = np.mean(Pulse)
 
         return pressure_predict_result, oxygen_predict_result, Pulse_predict_result
 

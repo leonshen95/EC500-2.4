@@ -11,7 +11,7 @@ class input_api:
         self.blood_oxygen = blood_oxygen
         self.temperature = temperature
         self.time = time
-        self.dic = {"user_id": user_id, "gender": gender, "heartrate": heartrate,
+        self.dic = {"gender": gender, "heartrate": heartrate,
                     "Diastolic_BP": Diastolic_BP, "Systolic_BP":Systolic_BP, "blood_oxygen": blood_oxygen, 
                     "temperature": temperature, "time": time}
 
@@ -41,7 +41,7 @@ class input_api:
                     "temperature": self.temperature, "time": self.time}
             return user_data_dic
         if (wire == data_db):
-            return self.dic
+            return self.user_id, self.dic
         
         
 #my_data = input_api('a', 1, 'male', 1, 1, 10000, 1, 1, 1)

@@ -9,13 +9,13 @@ class Analyzer():
 
     def Signal_Loss(self, Heart_Rate, Body_temp):
         # Signal loss judgement
-        if (Heart_Rate < 30 and Body_temp < 36):
+        if (Heart_Rate < 60 and Body_temp < 36):
             return True
         return False
 
     def Shock_Alert(self, Heart_Rate, Body_temp):
         # Shock emergency judgement
-        if (Heart_Rate < 30 and Body_temp >= 36):
+        if (Heart_Rate < 60 and Body_temp >= 36):
             return True
         return False
     

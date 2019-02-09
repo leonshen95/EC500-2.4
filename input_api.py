@@ -32,22 +32,20 @@ class input_api:
 
 
 
-    def return_request(wire):
+    def return_request(self, wire):
         alert = 1
         data_db = 2
         if (wire == alert):
-            user_data_dic = {"heartrate": heartrate,
-                    "Diastolic_BP": Diastolic_BP, "Systolic_BP":Systolic_BP, "blood_oxygen": blood_oxygen, 
-                    "temperature": temperature, "time": time}
+            user_data_dic = {"heartrate": self.heartrate,
+                    "Diastolic_BP": self.Diastolic_BP, "Systolic_BP": self.Systolic_BP, "blood_oxygen": self.blood_oxygen, 
+                    "temperature": self.temperature, "time": self.time}
             return user_data_dic
         if (wire == data_db):
-            return dic
-
-
-
-
-
-#the user have the access to the patient cases in database, which contains the basic infomation and the fitness data
-#the user can only have the access to his own data
-#For the input function, are devided into different user groups which has different permission to access the database.
-#Once connected, It will also connect the hardware device to the internet, which enable it to use store the data into the user's directory.
+            return self.dic
+        
+        
+#my_data = input_api('a', 1, 'male', 1, 1, 10000, 1, 1, 1)
+#print(my_data.dic)
+#my_data.implement_filter()
+#print(my_data.dic)
+#print(my_data.return_request())
